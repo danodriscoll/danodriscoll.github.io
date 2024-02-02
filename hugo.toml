@@ -1,5 +1,5 @@
 baseURL = "https://www.giltedged.studio/"
-title = "Gilt Edged Studio"
+title = "Gilt Edged Analysis"
 author = "Daniel O'Driscoll"
 copyright = "Daniel O'Driscoll"
 paginate = 10
@@ -20,6 +20,7 @@ theme = "tailwind"
   contentTypeName = "posts"
   showReadingTime = false
   toc = false
+  favicon = "/static/favicon.ico" # Path to favicon file
 
   [params.header]
     logo = "development_icon.png"
@@ -52,6 +53,11 @@ theme = "tailwind"
 category = "categories"
 tag = "tags"
 series = "series"
+
+[services]
+
+  [services.googleAnalytics]
+    ID = ""
 
 [[redirects]]
   from = "/**"  
