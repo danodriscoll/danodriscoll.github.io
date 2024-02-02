@@ -1,0 +1,5 @@
+node_modules
+public
+themes/tailwind/exampleSite
+
+.hugo_build.lock

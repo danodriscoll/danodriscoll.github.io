@@ -1,0 +1,59 @@
+baseURL = "https://www.giltedged.studio/"
+title = "Gilt Edged Studio"
+author = "Daniel O'Driscoll"
+copyright = "Daniel O'Driscoll"
+paginate = 10
+languageCode = "en-us"
+theme = "tailwind"
+
+[markup]
+[markup.highlight]
+  # lineNos = true
+  noClasses = false
+
+[params]
+  # SEO keywords and description.
+  keywords = "agent-based models, modern monetary system, UK Gilts"
+  subtitle = "A data analysis project"
+  # dir name of your blog content (default is `content/posts`).
+  # the list of set content will show up on your index page (baseurl).
+  contentTypeName = "posts"
+  showReadingTime = false
+  toc = false
+
+  [params.header]
+    logo = "development_icon.png"
+
+  [params.footer]
+    since = 2023
+    poweredby = false
+
+[menu]
+
+  [[menu.main]]
+    identifier = "post"
+    name = "Post"
+    pageRef = "/posts"
+    weight = 0
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    pageRef = "/about"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "models"
+    name = "Models"
+    pageRef = "/models"
+    weight = 10
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[[redirects]]
+  from = "/**"  
+  to = "/404.html"
+  status = 404
