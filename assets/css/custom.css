@@ -1,0 +1,10 @@
+/* custom css here. */
+.bg-red-100 {
+    background-color: rgb(254 226 226);
+}
+.bg-red-950 {
+    background-color: rgb(69 10 10);
+}
+.disclaimer-text{
+    color: rgb(226 232 240);
+}

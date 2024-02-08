@@ -1,9 +1,10 @@
 baseURL = "https://www.giltedged.studio/"
-title = "Gilt Edged Analysis"
+title = "Gilt Edged Studio"
 author = "Daniel O'Driscoll"
 copyright = "Daniel O'Driscoll"
-paginate = 10
+paginate = 5
 languageCode = "en-us"
+enableInlineShortcodes = true
 theme = "tailwind"
 
 [markup]
@@ -20,7 +21,7 @@ theme = "tailwind"
   contentTypeName = "posts"
   showReadingTime = false
   toc = false
-  favicon = "/static/favicon.ico" # Path to favicon file
+  favicon = "/static/favicon.ico" # Path to favicon file  
 
   [params.header]
     logo = "development_icon.png"
@@ -44,9 +45,15 @@ theme = "tailwind"
     weight = 10
 
   [[menu.main]]
-    identifier = "models"
-    name = "Models"
-    pageRef = "/models"
+    identifier = "EMS"
+    name = "EMS"
+    pageRef = "/early-modern-system"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "resource"
+    name = "Resource"
+    pageRef = "/resource"
     weight = 10
 
 [taxonomies]
@@ -57,7 +64,7 @@ series = "series"
 [services]
 
   [services.googleAnalytics]
-    ID = ""
+    ID = "G-D7PXB7SQCH"
 
 [[redirects]]
   from = "/**"  

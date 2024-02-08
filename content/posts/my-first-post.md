@@ -2,7 +2,7 @@
 title = 'My First Post'
 date = 2024-01-31T11:58:14Z
 draft = false
-toc = true
+toc = false
 tags = [
     "model",
 ]
@@ -11,6 +11,10 @@ categories = [
 ]
 series = ["Speculation"]
 +++
-## Introduction
+This is the post summary text.
+<!--more-->
 
-This is a website.
+## Heading
+
+More post text...
+

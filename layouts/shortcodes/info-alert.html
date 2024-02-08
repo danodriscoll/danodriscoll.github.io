@@ -1,0 +1,8 @@
+<div class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800" role="alert">
+  {{ with .Get "title" }}
+    <span class="px-3 text-3xl">{{ . }}</span>
+  {{ end }}
+  <p class="px-3 font-light">
+    {{ trim .Inner "\r\n" | .Page.RenderString }}
+  </p>
+</div>
