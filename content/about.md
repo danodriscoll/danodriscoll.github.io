@@ -1,30 +1,33 @@
 +++
 title = 'About GiltEdged.studio'
 button = 'About'
-weight = 2
+weight = 10
+toc = false
 +++
 
 **A United Kingdom of Great Britain and Northern Ireland (UK) Perspective. Part of a self-directed [learning project](https://www.modernmoney.studio).**
 
 ## Project & Goal
 
-GiltEdged.studio is an evolving agent-based modelling and data analysis project. Government and central bank agents have their views, their rules, on the level of economic parameters to be set. Household agent types emerge - expectations diverge on spending, [taxation](https://docs.google.com/document/d/e/2PACX-1vRCD-HGDk2xlRkY_6eB2Hp90jZ9YNWok8xOhrOBYwgFR1CMZO-Vl-FsQ_AyAt-Pk-PL3hjrmgQPbU26/pub) and interest rates. The goal is to better understand the UK government money system, in particular, to speculate on the direction of real-world UK [Gilt](#gilt) yields.
+GiltEdged.studio is a bounded evolving [model](https://www.modernmoney.studio/models/model-future-development#nav-bar) and data analysis project. Government and central bank agents have their views, their rules, on the level of economic parameters to be set. Household agent types emerge - expectations diverge on spending, taxation and interest rates.
+
+The goal is to better understand the UK government money system, in particular, to test both likely and unlikely independent variable relationships in order to speculate on the direction of real-world UK [Gilt](#gilt) (long-bond) yields.
 
 ### Gilt{#gilt}
 
-A gilt is a UK Government liability denominated in sterling, issued by the UK Treasury and listed on the London Stock Exchange. The term *gilt* or “gilt-edged security” is a reference to the primary characteristic of gilts as an investment: their security.
+A gilt is a UK Government liability denominated in sterling, issued by the UK Treasury and listed on the London Stock Exchange. The term *gilt* or *gilt-edged security* is a reference to the primary characteristic of gilts as an investment: their security.
 
-### Model
+{{< info-alert title="Supposition" >}}
+Long-bond yields are principally the effects of a change in the velocity of a monetary system bound by fundamental parameters set within an inexorable [macrofinancial](https://www.data-reports.net/studio-sketch/public-private-finance.html) regime.
+{{< /info-alert >}}
+
+### Model Development
 
 1. **Diagnosis**: Requires plausible explanations of how a State may structure a cash and money asset producing system.
 2. **Policy**: To apply historical and credible accounts of UK government money system operations.
 3. **Action**: To develop technological systems, agent-based models, grounded in valid system accounting.
 
-A bounded evolving [model](https://www.modernmoney.studio/models/model-future-development#nav-bar) consumes real-world UK economic time-series data ranging from Q1 1974 to the latest available. Beyond the latest available real-world UK economic time-series, model variables, that is, pure expenditures, taxation rates and interest rates are set by model government and central bank agents respectively.
-
-{{< info-alert title="Supposition" >}}
-Gilt dynamics are primarily the effects of monetary system parameters set within an inexorable [macrofinancial](https://www.data-reports.net/studio-sketch/public-private-finance.html) regime.
-{{< /info-alert >}}
+The model consumes real-world UK economic time-series data ranging from Q1 1974 to the latest available. Beyond the latest available time-series, independent variables are set by model government and central bank agents respectively.
 
 #### Dependent Variables
 
@@ -33,10 +36,12 @@ Gilt dynamics are primarily the effects of monetary system parameters set within
 
 #### Independent Variables
 
-- The Government set expenditure (of interest to all household types).
-- The Government set taxation rates (of interest to all household types).
-- The Central Bank sets the rate on interest-bearing money assets (of interest to all household types).
-- The coupon rate on Consols (Long Bonds) (of interest to household agents by type).
+- Government expenditure.
+- Mutually exclusive Government taxation rate themes:
+    - One flat rate of taxation for all household agents.
+    - Marginal rate taxation brackets. Defined by household agent wage and system average wage.
+    - Marginal rate taxation brackets. Defined by household agent wealth and type.
+- The Central Bank sets a rate on interest-bearing money assets.
 
 ### Data Analysis
 
