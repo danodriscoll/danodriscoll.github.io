@@ -11,3 +11,5 @@ categories = [
 ]
 series = [""]
 +++
+This is the post summary text.
+<!--more-->
