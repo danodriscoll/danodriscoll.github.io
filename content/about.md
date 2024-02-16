@@ -9,7 +9,7 @@ toc = false
 
 ## Project & Goal
 
-GiltEdged.studio is a bounded evolving [model](https://www.modernmoney.studio/models/model-future-development#nav-bar) and data analysis project. Government and central bank agents have their views, their rules, on the level of economic parameters to be set. Household agent types emerge - expectations diverge on spending, taxation and interest rates.
+GiltEdged.studio is a bounded evolving [model](https://www.modernmoney.studio/models#abmlp) and data analysis project. Government and central bank agents have their views, their rules, on the level of economic parameters to be set. Household agent types emerge - expectations diverge on spending, taxation and interest rates.
 
 The goal is to better understand the UK government money system, in particular, to test both likely and unlikely variable relationships in order to speculate on the direction of real-world UK [Gilt](#gilt) (long-bond) yields.
 
