@@ -11,14 +11,14 @@ toc = false
 
 GiltEdged.studio is a bounded evolving [model](https://www.modernmoney.studio/models/model-future-development#nav-bar) and data analysis project. Government and central bank agents have their views, their rules, on the level of economic parameters to be set. Household agent types emerge - expectations diverge on spending, taxation and interest rates.
 
-The goal is to better understand the UK government money system, in particular, to test both likely and unlikely independent variable relationships in order to speculate on the direction of real-world UK [Gilt](#gilt) (long-bond) yields.
+The goal is to better understand the UK government money system, in particular, to test both likely and unlikely variable relationships in order to speculate on the direction of real-world UK [Gilt](#gilt) (long-bond) yields.
 
 ### Gilt{#gilt}
 
 A gilt is a UK Government liability denominated in sterling, issued by the UK Treasury and listed on the London Stock Exchange. The term *gilt* or *gilt-edged security* is a reference to the primary characteristic of gilts as an investment: their security.
 
 {{< info-alert title="Supposition" >}}
-Long-bond yields are principally the effects of a change in the velocity of a monetary system bound by fundamental parameters set within an inexorable [macrofinancial](https://www.data-reports.net/studio-sketch/public-private-finance.html) regime.
+Long-bond yield dynamics are principally the effects of a change in the velocity of a monetary system bound by parameters set in the context of an inexorable [macrofinancial](https://www.data-reports.net/studio-sketch/public-private-finance.html) regime.
 {{< /info-alert >}}
 
 ### Model Development
@@ -45,7 +45,7 @@ The model consumes real-world UK economic time-series data ranging from Q1 1974 
 
 ### Data Analysis
 
-Local [JupyterLab](https://jupyter.org/) notebooks facilitate model and real-world UK economic time-series data analysis learning. Posts are the results of analysis as well as thoughts on model development and project updates. Posts may change, break or disappear at any time. View a simple technical [architecture](https://www.data-reports.net/studio-sketch/architecture.html).
+Local [Jupyter](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) notebooks facilitate model and real-world UK economic time-series data analysis learning. Posts are the results of analysis as well as thoughts on model development and project updates. Posts may change, break or disappear at any time. View a simple technical [architecture](https://www.data-reports.net/studio-sketch/architecture.html).
 
 {{< disclaimer-alert title="Disclaimer" >}}
 The website and data applications and the information contained herein is not intended to be a source of advice or credit analysis with respect to the material presented, and the information and / or documents contained in this website and data applications do not constitute investment advice.
