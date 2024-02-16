@@ -1,15 +1,9 @@
 /* custom css here. */
-.bg-red-100 {
-    background-color: rgb(254 226 226);
+.bg-slate-500 {
+    background-color: rgb(100 116 139);
 }
-.bg-red-950 {
-    background-color: rgb(69 10 10);
-}
-.bg-amber-300{
-    background-color: rgb(252 211 77);
-}
-.disclaimer-text{
-    color: #34495E;
+.text-yellow-200 {
+    color: rgb(254 240 138);
 }
 table tbody td {
     border-bottom-width: 1px;
