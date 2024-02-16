@@ -27,8 +27,6 @@ Long-bond yield dynamics are principally the effects of a change in the velocity
 2. **Policy**: To apply historical and credible accounts of UK government money system operations.
 3. **Action**: To develop technological systems, agent-based models, grounded in valid system accounting.
 
-The model consumes real-world UK economic time-series data ranging from Q1 1974 to the latest available. Beyond the latest available time-series, independent variables are set by model government and central bank agents respectively.
-
 #### Dependent Variables
 
 - Macro: Yields and prices: System velocity and momentum.
