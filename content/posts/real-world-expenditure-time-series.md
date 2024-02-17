@@ -1,5 +1,5 @@
 +++
-title = 'Clarity on Real World Expenditure Time Series'
+title = 'Clarity on Expenditure Time Series'
 date = 2024-02-13T14:13:47Z
 draft = false
 toc = true
@@ -11,7 +11,7 @@ categories = [
 ]
 series = [""]
 +++
-Fragments of an email exchange between myself (Dan) and a helpful member of the [ONS](https://www.ons.gov.uk/) GDP team about which Government expenditure time-series would be most appropriate to use in my model.
+Fragments of an email exchange between myself (Dan) and a helpful member of the [ONS](https://www.ons.gov.uk/) GDP team about which UK Government expenditure time-series would be most appropriate to use in my model.
 <!--more-->
 
 ## Email Fragment: Sent to ONS
