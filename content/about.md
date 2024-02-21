@@ -18,7 +18,7 @@ The goal is to better understand the UK government money system, in particular, 
 A gilt is a UK Government liability denominated in sterling, issued by the UK Treasury and listed on the London Stock Exchange. The term *gilt* or *gilt-edged security* is a reference to the primary characteristic of gilts as an investment: their security.
 
 {{< info-alert title="Supposition" >}}
-Long-bond yield dynamics are principally the effects of a change in the velocity of a monetary system bound by parameters set in the context of an inexorable [macrofinancial](https://www.data-reports.net/studio-sketch/public-private-finance.html) regime.
+Monetary system parameters are shaped by the policy objectives of an independent Central Bank. Gilt dynamics are principally the effects of a change in the velocity of a government money system encircled by an inexorable [macrofinancial](https://www.data-reports.net/studio-sketch/public-private-finance.html) regime.
 {{< /info-alert >}}
 
 ### Model Development
