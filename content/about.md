@@ -11,14 +11,14 @@ toc = false
 
 GiltEdged.studio is a bounded evolving [model](https://www.modernmoney.studio/models#abmlp) and data analysis project. Government and central bank agents have their views, their rules, on the level of economic parameters to be set. Household agent types emerge - expectations diverge on spending, taxation and interest rates.
 
-The goal is to better understand the UK government money system, in particular, to test both likely and unlikely variable relationships in order to speculate on the direction of real-world UK [Gilt](#gilt) (long-bond) yields.
+The goal is to better understand the UK Government money system. In particular, to consider how the behaviour of institutions in relation to system parameters may affect real-world UK [Gilt](#gilt) yields.
 
 ### Gilt{#gilt}
 
 A gilt is a UK Government liability denominated in sterling, issued by the UK Treasury and listed on the London Stock Exchange. The term *gilt* or *gilt-edged security* is a reference to the primary characteristic of gilts as an investment: their security.
 
 {{< info-alert title="Supposition" >}}
-Monetary system parameters are shaped by the policy objectives of an independent Central Bank. Gilt dynamics are principally the effects of a change in the velocity of a government money system encircled by an inexorable [macrofinancial](https://www.data-reports.net/studio-sketch/public-private-finance.html) regime.
+State institutions set the rules. Rules and parameters are shaped by the policy objectives of Government and an independent Central Bank. Gilt dynamics are principally the effects of a change in the velocity of a State monetary system encircled by an inexorable [macrofinancial](https://www.data-reports.net/studio-sketch/public-private-finance.html) regime.
 {{< /info-alert >}}
 
 ### Model Development
