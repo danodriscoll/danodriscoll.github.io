@@ -9,16 +9,14 @@ toc = false
 
 ## Project & Goal
 
-GiltEdged.studio is a bounded evolving [model](https://www.modernmoney.studio/models#abmlp) and data analysis project. Government and central bank agents have their views, their rules, on the level of economic parameters to be set. Household agent types emerge - expectations diverge on spending, taxation and interest rates.
+GiltEdged.studio is a bounded evolving [model](https://www.modernmoney.studio/models#abmlp) and data analysis project. Rules and parameters are shaped by the policy objectives of Government and an independent Central Bank. Household types emerge - expectations diverge on spending, taxation and portfolios.
 
-The goal is to better understand the UK Government money system. In particular, to consider how the behaviour of institutions in relation to system parameters may affect real-world UK [Gilt](#gilt) yields.
+The goal is to better understand the UK Government money system. Subgoals include: To explore a supposed time-series relationship between monetary model velocity and real-world UK [Gilt](#gilt) yields. To speculate on model monetary parameter possibilities in the context of a system encircled by an inexorable [macrofinancial](https://www.data-reports.net/studio-sketch/public-private-finance.html) regime.
 
 ### Gilt{#gilt}
 
+{{< info-alert title="Government Liability" >}}
 A gilt is a UK Government liability denominated in sterling, issued by the UK Treasury and listed on the London Stock Exchange. The term *gilt* or *gilt-edged security* is a reference to the primary characteristic of gilts as an investment: their security.
-
-{{< info-alert title="Supposition" >}}
-Monetary system rules and parameters are shaped by the policy objectives of Government and an independent Central Bank. Gilt dynamics are principally the effects of a change in the velocity of a monetary system encircled by an inexorable [macrofinancial](https://www.data-reports.net/studio-sketch/public-private-finance.html) regime.
 {{< /info-alert >}}
 
 ### Model Development
