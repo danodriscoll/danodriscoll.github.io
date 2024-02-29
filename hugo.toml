@@ -2,7 +2,7 @@ baseURL = "https://www.giltedged.studio/"
 title = "Gilt Edged Studio"
 author = "Daniel O'Driscoll"
 copyright = "Daniel O'Driscoll"
-paginate = 5
+paginate = 4
 languageCode = "en-us"
 enableInlineShortcodes = true
 theme = "tailwind"
@@ -21,7 +21,7 @@ theme = "tailwind"
   contentTypeName = "posts"
   showReadingTime = false
   toc = false
-  favicon = "/static/favicon.ico" # Path to favicon file  
+  favicon = "/static/favicon.ico" # Path to favicon file
 
   [params.header]
     logo = "development_icon.png"
@@ -57,9 +57,9 @@ theme = "tailwind"
     weight = 3
 
   [[menu.main]]
-    identifier = "custom"
-    name = "Custom Made"
-    pageRef = "/custom-made"
+    identifier = "contact"
+    name = "Contact"
+    pageRef = "/contact"
     weight = 4
 
 [taxonomies]
