@@ -1,0 +1,13 @@
+{{ $json := .Get "json" }}
+{{ $format := "json"}}
+{{ $url := print $json "." $format}}
+{{ $height := .Get "height" | default "200px" }}
+<div id="{{ $url }}" class="plotly" style="height:{{ $height }}"></div>
+<script>
+Plotly.d3.json({{$url}}, function(err, fig) {
+    Plotly.plot('{{$url}}', fig.data, fig.layout, {
+        responsive: true,
+        displayModeBar: false
+    });
+});
+</script>

@@ -1,0 +1,5 @@
+{{ $html := .Get "html" }}
+{{ $format := "html"}}
+{{ $url := print $html "." $format}}
+{{ $linkText := .Get "link-text" }}
+<a href="{{ .Site.BaseURL }}/{{ $url }}" target="_blank">{{ $linkText }}</a>
