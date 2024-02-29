@@ -2,7 +2,7 @@
 title = 'A Rough Roadmap'
 date = 2024-02-17T06:55:36Z
 draft = false
-toc = true
+toc = false
 tags = [
     "development",
 ]
@@ -11,12 +11,14 @@ categories = [
 ]
 series = [""]
 +++
-Some thoughts on the direction of model development in early 2024.
+Some thoughts on the direction of model development.
 <!--more-->
 
-The model consumes real-world UK economic time-series data ranging from Q1 1974 to the latest available. Model development seeks to enhance model agent decision-making that is required to go beyond the latest available time-series. Specifically, the logic of government, central bank, and household(s) with respect to *expenditures*, *interest rate* policy and *asset portfolio* decisions respectively.
+## Nearer-Term
 
-## Accounting and Logic Development
+The model consumes real-world UK economic time-series data ranging from Q1 1974 to the latest available. Model development seeks to enhance agent decision-making that is required to go beyond the latest available time-series. Specifically, the logic of government, central bank, and household(s) with respect to *expenditures*, *interest rate* policy and *asset portfolio* decisions respectively.
+
+### Accounting and Logic Development
 
 **Government Agent**
 - Expand government agent logic to include:
@@ -34,3 +36,7 @@ The model consumes real-world UK economic time-series data ranging from Q1 1974 
 **Producer and Household Agents**
 - Producer agents may employ multiple household agents.
 - Household agents as money asset managers: They have bond price expectations; the majority having assumptions about the interest (base) rate in the next step; a minority are attentive to the macro system velocity and momentum.
+
+## Longer-Term
+
+Accounting for household agents attentive to market-based finance exigency.
