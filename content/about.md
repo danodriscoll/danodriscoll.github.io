@@ -11,7 +11,7 @@ toc = false
 
 GiltEdged.studio is a bounded evolving [model](https://www.modernmoney.studio/models#abmlp) and data analysis project. Rules and parameters are shaped by the policy objectives of Government and an independent Central Bank. Household types emerge - expectations diverge on spending, taxation and portfolios.
 
-The goal is to better understand the UK Government money system. Subgoals include: To explore a supposed time-series relationship between monetary model velocity and real-world UK [Gilt](#gilt) yields. To speculate on model monetary parameter possibilities in the context of a system encircled by an inexorable [macrofinancial](https://www.data-reports.net/studio-sketch/public-private-finance.html) regime.
+The goal is to better understand a Government money system encircled by an inexorable [macrofinancial](https://www.data-reports.net/studio-sketch/public-private-finance.html) regime. In particular, to explore time-series relationships that may exist between model output and real-world [Gilt](#gilt) yields.
 
 ### Gilt{#gilt}
 
