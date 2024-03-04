@@ -11,10 +11,8 @@ categories = [
 ]
 series = [""]
 +++
-The simple actions of a model Central Bank before agent behavioural developments.
+This is a simple Central Bank agent. The model consumes a time-series of historic UK interest (base) rates. (See [Resource]({{< ref "/resource" >}} "Model Input: Real-World Interest Rates")).
 <!--more-->
-
-## A Simple Central Bank
 
 {{< highlight python >}}
 class CentralBank(Agent):
@@ -43,10 +41,15 @@ class CentralBank(Agent):
         3 Purchase government bills surplus to household requirements. (t)
         """
         #1
-        self.rb = float(rate_data['value'].iloc[self.period])
+        self.rb = float(rate_data['value'].iloc[self.period]) # Historic rates.
+
+        # 1. See https://www.bankofengland.co.uk/about/people/monetary-policy-committee
+        # 2. See https://scikit-learn.org/stable/modules/tree.html#classification
+        # X, y = mpc_voting.data, mpc_voting.target 
+        # self.rb = predict_policy_rate(sys_velocity, X, y) # Beyond historic rates.
 
         #2
-        government = get_agents_of_type("Government") # Communicate with Government.
+        government = get_agents_of_type("Government") # Communicate with Government Agent.
         self.Fcb = self.INTcb # Interest received from government.
         government.Fcb += self.Fcb # Distribute profit to government.
 

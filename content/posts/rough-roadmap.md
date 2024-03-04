@@ -2,41 +2,44 @@
 title = 'A Rough Roadmap'
 date = 2024-02-17T06:55:36Z
 draft = false
-toc = false
+toc = true
 tags = [
     "development",
 ]
 categories = [
     "model",
+    "analysis",
 ]
 series = [""]
 +++
-Some thoughts on the direction of model development.
+Some thoughts on model development.
 <!--more-->
 
-## Nearer-Term
+## Model
 
-The model consumes real-world UK economic time-series data ranging from Q1 1974 to the latest available. Model development seeks to enhance agent decision-making that is required to go beyond the latest available time-series. Specifically, the logic of government, central bank, and household(s) with respect to *expenditures*, *interest rate* policy and *asset portfolio* decisions respectively.
+The model consumes real-world UK economic time-series data ranging from Q1 1974 to the latest available. Model development seeks to enhance agent decision-making that is required to go *beyond* the latest available time-series. Specifically, the logic of government, central bank, and household(s) with respect to *expenditures*, *interest rate* policy and *asset portfolio* decisions respectively.
 
-### Accounting and Logic Development
+### Agent Logic & Accounting
 
-**Government Agent**
-- Expand government agent logic to include:
-    - The effect of household liquidity preference on long rates,
-    - Make pure expenditures endogenous in context:
-        - A simple bounded [macrofinancial](https://www.data-reports.net/studio-sketch/public-private-finance.html) regime. A macrofinancial regime is a particular combination of monetary, fiscal, and financial institutions, the governance strategy of a state, that shapes the creation and allocation of money.
-        - Historical rules; the Treasury view. See Godley & Lavoie, chapter 5, pp 147-165.
-    - Distribution, tax and household agent types: View [taxation themes]({{< ref "/posts/taxation-themes" >}} "Government agent taxtion themes").
+- Government:
+    - Pure expenditures percentage increase is a quantitative response to the trend direction of (model) consol yield. See ‘The Treasury view’: Godley & Lavoie, chapter 5, pp 147-165.
+- Central Bank:
+    - The interest (base) rate set is a reaction to (model) monetary system velocity; one part of the decision-tree analysis also informed by real-world BoE interest rate decisions.
+    - *Forward Guidance:* Interest rate in the next step:
+        - Rate decisions made public are accurately stated 50% of the time (on average) to *non-preferred* household agents.
+        - Rate decisions made available to *preferred* household agents are accurate 100% of the time.
+    - Account for long-term bonds (consol account) on the asset side of the Central Bank balance sheet.
+- Producer(s):
+    - May employ multiple household agents.
+- Household(s):
+    - Have bond price expectations reflecting Central Bank forward guidance.
 
-**Central Bank Agent**
-- Expand central bank accounting and logic:
-    - Account for long-term bonds on the asset side of the central bank balance sheet.
-    - Use historical analysis of interest (base) rate time-series to inform categorical decision-making tree logic.
+## Time-Series Data
 
-**Producer and Household Agents**
-- Producer agents may employ multiple household agents.
-- Household agents as money asset managers: They have bond price expectations; the majority having assumptions about the interest (base) rate in the next step; a minority are attentive to the macro system velocity and momentum.
+### From Quarterly to Monthly Time-Series
 
-## Longer-Term
+The expenditure data consumed by the model is a quarterly financial series. Both model and output analysis may benefit from *exploding* the quarterly series into a monthly series before model consumption. A monthly time series of interest (base) rates is offered by the Central Bank (See [Resource]({{< ref "/resource" >}} "Time Series Resource")).
 
-Accounting for household agents attentive to market-based finance exigency.
+### Quarterly Expenditure to Monthly Series: Draft Notebook Script
+
+{{< notebook "jupyter/monthly_expenditure_example" 1600 >}}
