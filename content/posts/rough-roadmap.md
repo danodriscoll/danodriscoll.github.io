@@ -22,7 +22,7 @@ The model consumes real-world UK economic time-series data ranging from Q1 1974 
 ### Agent Logic & Accounting
 
 - Government:
-    - Pure expenditures percentage increase is a quantitative response to the trend direction of (model) consol yield. See ‘The Treasury view’: Godley & Lavoie, chapter 5, pp 147-165.
+    - The increase of 'Pure Expenditures' as a percentage is informed by a decision-tree analysis of historic real-world expenditures and the (model) monetary system velocity. See 'The Treasury view': Godley & Lavoie, chapter 5, pp 147-165.
 - Central Bank:
     - The interest (base) rate set is a reaction to (model) monetary system velocity; one part of the decision-tree analysis also informed by real-world BoE interest rate decisions.
     - *Forward Guidance:* Interest rate in the next step:
