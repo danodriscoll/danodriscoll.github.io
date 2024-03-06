@@ -29,4 +29,6 @@ weight = 2
 
 ## Data Science
 
+*Time-Series Analysis* and *Decision-Tree Classification* learning.
+
 - Notebooks and datasets | [Kaggle](https://www.kaggle.com)
