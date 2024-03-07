@@ -61,6 +61,6 @@ df["velocity_bills"] = ((abs(df["Bs"] - df["Bs"].shift(1)))
 {{< /highlight >}}
 
 {{< load-plotly >}}
-{{< plotly json="/plotly/json/kenobi-671-model-run-22-02-2024-analysis" height="500px" >}}
+{{< plotly json="/plotly/json/kenobi-671-model-run-22-02-2024-analysis-sys-velocity" height="500px" >}}
 
-This {{< plotly-full-screen html="plotly/html/kenobi-671-model-run-22-02-2024-analysis" link-text="full screen plot" >}} includes time-series annotations highlighting political administration periods and some key moments for model bills velocity and corresponding real-world gilts.
+This {{< plotly-full-screen html="plotly/html/kenobi-671-model-run-22-02-2024-analysis-sys-velocity" link-text="full screen plot" >}} includes time-series annotations highlighting political administration periods and some key moments for model bills velocity and corresponding real-world gilts.
