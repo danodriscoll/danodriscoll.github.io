@@ -30,12 +30,33 @@ The simplest suite of model run parameters: One, household, one producer and a s
 - Coupon Rate: 0%
 - Interest Rate: 0%
 
-### Velocity_Bills
+### Model Bills
+
+{{< highlight python >}}
+"""
+G&L p146: Govt Budget Constraint (Bs):
+(Equation 5.14) ΔBs ≡ Bs - Bs₋₁ == (G + rb₋₁ * Bs₋₁ + BLs₋₁) - (T + rb₋₁ * Bcb₋₁) - ΔBLs₋₁ * PbL
+
+"The bills 'Bs' that need to be newly issued are equal to government expenditures,
+including its interest payments minus the govt revenues - taxes and central bank profits - plus
+the value of the newly issued long-term bonds. Needless to say, when there is a government surplus,
+or when the government deficit is financed by new issues of long-term bonds,
+the change in Treasury bills will be negative and bills will be redeemed."
+"""
+
+expenditures = self.Gd + self.INT_Bh + self.INT_Bcb + self.INT_BLh
+revenues = self.Td + self.Fcb # Taxes and central bank profits.
+
+self.GD = (expenditures - revenues) - val_new_bonds_issued
+self.Bs -= self.GD_Close - self.GD_Open
+{{< /highlight >}}
+
+### Velocity Model Bills
 
 {{< highlight python >}}
 # Model System Velocity: Change in bills issued, from one period to the next,
 # divided by national income.
-df["velocity_bills"] = ((abs(df["bills_issued"] - df["bills_issued"].shift(1)))
+df["velocity_bills"] = ((abs(df["Bs"] - df["Bs"].shift(1)))
                         / df["national_income"]) * 100
 {{< /highlight >}}
 
