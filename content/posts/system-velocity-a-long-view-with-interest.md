@@ -37,16 +37,45 @@ See GiltEdged [model runs](https://docs.google.com/spreadsheets/d/e/2PACX-1vRjjK
 
 ### Model Bond Price
 
+{{< highlight python >}}
+""" 
+G&L pp131-132: The value of a perpetuity (long-term bond) in this step.
+Use the interest rate from the previous step to calculate
+the price of a long-term bond in this step.
+"""
+central_bank = get_agents_of_type("Central Bank")
+self.PbL = zero_division(self.Coupon_Rate, central_bank.rb)
+{{< /highlight >}}
+
 {{< plotly json="/plotly/json/r2d2-477-model-run-22-02-2024-analysis-bond-price" height="500px" >}}
 
 ### Model Bond Yield
+
+{{< highlight python >}}
+""" 
+Use the bond price in this step to calculate the long-term rate of interest (bond yield (to maturity)).
+"""
+self.rbL = zero_division(self.Coupon_Rate, self.PbL)
+{{< /highlight >}}
 
 {{< plotly json="/plotly/json/r2d2-477-model-run-22-02-2024-analysis-bond-yield" height="500px" >}}
 
 ### Model Interest Payments
 
+{{< highlight python >}}
+""" 
+Connect with the central bank.
+"""
+central_bank = get_agents_of_type("Central Bank")
+self.make_interest_payments(central_bank)
+{{< /highlight >}}
+
 {{< plotly json="/plotly/json/r2d2-477-model-run-22-02-2024-analysis-int-payments" height="500px" >}}
 
 ### Model Interest & Debt
+
+{{< highlight python >}}
+self.GD = (expenditures - revenues) - val_new_bonds_issued
+{{< /highlight >}}
 
 {{< plotly json="/plotly/json/r2d2-477-model-run-22-02-2024-analysis-int-payments-debt" height="500px" >}}
