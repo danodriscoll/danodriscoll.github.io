@@ -29,6 +29,6 @@ weight = 2
 
 ## Data Science
 
-*Time-Series Analysis* and *Decision-Tree Classification* learning.
+Local [Jupyter](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) notebooks facilitate data science learning. Posts are the results of analysis as well as thoughts on model development and project updates. Posts may change, break or disappear at any time. View a simple technical [architecture](https://www.data-reports.net/studio-sketch/architecture.html).
 
-- Notebooks and datasets | [Kaggle](https://www.kaggle.com)
+For *Time-Series Analysis* and *Decision-Tree Classification* learning, visit [Kaggle](https://www.kaggle.com) for notebooks and datasets.

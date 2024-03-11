@@ -13,13 +13,13 @@ GiltEdged.studio is a bounded evolving [model](https://www.modernmoney.studio/mo
 
 ### Goal
 
-To better understand the outcomes of a Government money system encircled by a distinct [macrofinancial](https://www.data-reports.net/studio-sketch/public-private-finance.html) regime. Broadly, to appreciate the diverging expectations of household agent types on spending, taxation and portfolios. To explore time-series relationships that may exist between model output and real-world UK economic time-series, in particular, [Gilt](#gilt) dynamics.
+To better understand the mechanics of a Government money system. To explore the output of a model monetary system constrained by agent [parameter]({{< ref "/posts/development-roadmap/#model" >}} "A Development Roadmap") rules. Specifically, to correlate time-series relationships that may exist between model output and [Gilt](#gilt) dynamics within a distinct [macrofinancial](https://www.data-reports.net/studio-sketch/public-private-finance.html) system.
 
 {{< info-alert title="Gilt" id="gilt" >}}
 A gilt is a UK Government liability denominated in sterling, issued by the UK Treasury and listed on the London Stock Exchange. The term *gilt* or *gilt-edged security* is a reference to the primary characteristic of gilts as an investment: their security.
 {{< /info-alert >}}
 
-### Model Development
+### Model Build
 
 1. **Diagnosis**: Requires plausible explanations of how a State may structure a cash and money asset producing system.
 2. **Policy**: To apply historical and credible accounts of UK government money system operations.
@@ -38,10 +38,6 @@ A gilt is a UK Government liability denominated in sterling, issued by the UK Tr
     - Marginal rate taxation brackets. Defined by household agent wage and system average wage.
     - Marginal rate taxation brackets. Defined by household agent wealth and type.
 - The Central Bank sets a rate on interest-bearing money assets.
-
-### Data Analysis
-
-Local [Jupyter](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) notebooks facilitate model and real-world UK economic time-series data analysis learning. Posts are the results of analysis as well as thoughts on model development and project updates. Posts may change, break or disappear at any time. View a simple technical [architecture](https://www.data-reports.net/studio-sketch/architecture.html).
 
 {{< disclaimer-alert title="Disclaimer" >}}
 The website and data applications and the information contained herein is not intended to be a source of advice or credit analysis with respect to the material presented, and the information and / or documents contained in this website and data applications do not constitute investment advice.
