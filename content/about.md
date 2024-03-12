@@ -9,17 +9,19 @@ toc = false
 
 ## Project
 
-GiltEdged.studio is a bounded evolving [model](https://www.modernmoney.studio/models#abmlp) and data analysis project. Model parameters are shaped by the policy objectives of Government and an independent Central Bank.
+GiltEdged.studio is an agent-based [model](https://www.modernmoney.studio/models#abmlp) and data analysis project.
 
 ### Goal
 
-To better understand the mechanics of a Government money system. To explore the output of a model monetary system constrained by agent [parameter]({{< ref "/posts/development-roadmap/#model" >}} "A Development Roadmap") rules. Specifically, to correlate time-series relationships that may exist between model output and [Gilt](#gilt) dynamics within a distinct [macrofinancial](https://www.data-reports.net/studio-sketch/public-private-finance.html) system.
+To better understand [Gilt](#gilt) dynamics as Government money system effects. To develop an authentic monetary system model bound by agent behaviours and [parameter]({{< ref "/posts/development-roadmap/#model" >}} "A Development Roadmap") rules. Specifically, to learn the tools and techniques required to analyse agent model output in conjunction with real-world economic time-series data.
 
 {{< info-alert title="Gilt" id="gilt" >}}
 A gilt is a UK Government liability denominated in sterling, issued by the UK Treasury and listed on the London Stock Exchange. The term *gilt* or *gilt-edged security* is a reference to the primary characteristic of gilts as an investment: their security.
 {{< /info-alert >}}
 
 ### Model Build
+
+The policy objectives of Government and an independent Central Bank are set within a distinct [macrofinancial](https://www.data-reports.net/studio-sketch/public-private-finance.html) setup.
 
 1. **Diagnosis**: Requires plausible explanations of how a State may structure a cash and money asset producing system.
 2. **Policy**: To apply historical and credible accounts of UK government money system operations.
