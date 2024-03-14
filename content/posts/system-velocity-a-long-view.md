@@ -51,13 +51,15 @@ self.GD = (expenditures - revenues) - val_new_bonds_issued
 self.Bs -= self.GD_Close - self.GD_Open
 {{< /highlight >}}
 
-### Velocity Model Bills
+### Velocity of Model Bills Issued
 
 {{< highlight python >}}
-# Model System Velocity: Change in bills issued, from one period to the next,
-# divided by national income.
-df["velocity_bills"] = ((abs(df["Bs"] - df["Bs"].shift(1)))
-                        / df["national_income"]) * 100
+# Change in bills issued, from one period to the next,
+# as percentage of national income.
+import numpy as np
+
+vel_bills = np.diff(df["Bs"])
+df["vel_Bs"] = (abs(vel_bills) / df["Y"]) * 100
 {{< /highlight >}}
 
 {{< load-plotly >}}
