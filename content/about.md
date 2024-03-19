@@ -13,7 +13,7 @@ GiltEdged.studio applies UK economic time-series to an evolving agent-based mone
 
 ### Goal
 
-The primary goal is to better understand longer-term [Gilt](#gilt) dynamics as lagged effects of a Government money system bound by agent behaviours and [parameter]({{< ref "/posts/development-roadmap/#model" >}} "A Development Roadmap") rules.
+The primary goal is to better understand longer-term [Gilt](#gilt) dynamics as effects of a Government money system bound by agent behaviours and [parameter]({{< ref "/posts/development-roadmap/#model" >}} "A Development Roadmap") rules.
 
 {{< info-alert title="Gilt" id="gilt" >}}
 A gilt is a UK Government liability denominated in sterling, issued by the UK Treasury and listed on the London Stock Exchange. The term *gilt* or *gilt-edged security* is a reference to the primary characteristic of gilts as an investment: their security.
