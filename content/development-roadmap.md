@@ -12,6 +12,7 @@ A roadmap for agent-based model development.
 ### Government
 
 - The increase of 'Pure Expenditures' as a percentage is informed by an analysis of historic real-world expenditures. See *The Treasury view*: Godley & Lavoie, chapter 5, pp 147-165.
+- Taxation: See the [taxation]({{< ref "/posts/taxation-themes" >}} "Taxation Themes") themes post.
 
 ### Central Bank
 
