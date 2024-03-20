@@ -20,7 +20,7 @@ A simple analysis of the acceleration of model bills issued.
 
 The earlier post, [system velocity: a long view]({{< ref "/posts/system-velocity-a-long-view" >}} "System Velocity: A Long View"), previewed a model run with the simplest suite of parameter inputs. Extending this simple analysis is a plot showing the acceleration rate of model bills issued.
 
-The earlier post points out two periods, among others, where the velocity of model bills precedes a similar reaction in the real-world Gilt yield. The period between July 1997 and July 2003, however, shows the trend velocity of model bills issued increasing while the trend Gilt yield is decreasing. When looking at the acceleration of model bills issued, we see that across the same period there is actually a negative acceleration trend occurring. The velocity of bills issued may be increasing, but the system is experiencing negative acceleration - and Gilt yields are reacting.
+The earlier post points out two periods, among others, where the velocity of model bills precedes a similar reaction in the real-world Gilt yield. The period between July 1997 and July 2003, however, shows the trend velocity of model bills issued increasing while the trend Gilt yield is decreasing. When looking at the acceleration of model bills issued, we see that across the same period there is actually a negative acceleration trend occurring. The velocity of bills issued may be increasing, but the system is experiencing negative acceleration - to which Gilt yields may be reacting.
 
 {{< highlight python >}}
 """
