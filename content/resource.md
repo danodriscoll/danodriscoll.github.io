@@ -29,6 +29,6 @@ weight = 2
 
 ## Data Science
 
-Simple analysis of model output is performed in local [Jupyter](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) notebooks. Posts are the results of analysis as well as thoughts on model development and project updates. Posts may change, break or disappear at any time. View a simple technical architecture.
+Simple analysis of model output is performed in local [Jupyter](https://code.visualstudio.com/docs/datascience/jupyter-notebooks) notebooks. Posts are the results of analysis as well as thoughts on model development and project updates. Posts may change, break or disappear at any time. View a simple technical [architecture](https://www.data-reports.net/studio-sketch/architecture.html).
 
 Visit [Kaggle](https://www.kaggle.com) for data science learning resources.
