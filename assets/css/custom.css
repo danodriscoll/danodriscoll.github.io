@@ -10,3 +10,6 @@ table tbody td {
     border-style: solid;
     border-bottom-color: rgb(59 130 246 / 0.1);
 }
+.margin-bottom {
+    margin-bottom: 15px;
+}
