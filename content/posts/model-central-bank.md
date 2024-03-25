@@ -44,12 +44,14 @@ class CentralBank(Agent):
         self.rb = float(rate_data['value'].iloc[self.period]) # Historic rates.
 
         """
-        MPC Decision Tree:
-        1. See https://www.bankofengland.co.uk/about/people/monetary-policy-committee
-        2. See https://scikit-learn.org/stable/modules/tree.html#classification
+        Beyond historic rates:
+        Get all bills 'velocity' and 'acceleration' recordings for policy rate function.
         """
-        # X, y = mpc_voting.data, mpc_voting.target 
-        # self.rb = float(policy_interest_rate(sys_velocity, X, y)) # Beyond historic rates.
+        # self.rb = policy_interest_rate(
+        #   redis.lrange("bills:velocity", 0, -1),
+        #   redis.lrange("bills:acceleration", 0, -1),
+        #   self.period
+        #   )
 
         #2
         government = get_agents_of_type("Government") # Communicate with Government Agent.
