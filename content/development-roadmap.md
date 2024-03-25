@@ -7,16 +7,16 @@ toc = false
 
 A roadmap for agent-based model development.
 
-## Model Parameter Rules
+## Model Agent Parameter Rules
 
 ### Government
 
-- The increase of 'Pure Expenditures' as a percentage is informed by an analysis of historic real-world expenditures. See *The Treasury view*: Godley & Lavoie, chapter 5, pp 147-165.
+- Set within a *Treasury View* framework (See Godley & Lavoie, chapter 5, pp 147-165), the Government also receives advice on the increase in 'Pure Expenditures' from the Central Bank.
 - Taxation: See the [taxation]({{< ref "/posts/taxation-themes" >}} "Taxation Themes") themes post.
 
 ### Central Bank
 
-- The interest (base) rate set is a **lagged** reaction to the model velocity of bills. (CB rules may be further enhanced by a decision-tree classification analysis by real-world (BoE) interest rate decisions).
+- The monetary policy function is informed by Macro Data. See the [macro-data]({{< ref "/posts/macro-data-recording" >}} "Macro Data Recording") recording post.
 - Forward Guidance: The interest rate decision is made available to all agents in the next step.
 
 ### Producer(s)
@@ -25,4 +25,4 @@ A roadmap for agent-based model development.
 
 ### Household(s)
 
-- Have bond price expectations that reflect Central Bank forward guidance.
+- Have bond price expectations that reflect Central Bank *forward guidance*.
