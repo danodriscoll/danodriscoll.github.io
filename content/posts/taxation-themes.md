@@ -22,7 +22,7 @@ The model develops three taxation schemes for removing household agent wage and 
 {{< highlight python >}}
 def flatTaxToPay(self, amount, rate):
     """ Flat rate tax to pay. """
-    flat_tax_to_pay = Decimal('0.000')
+    flat_tax_to_pay = 0
     flat_tax_to_pay = amount * zero_division(rate, 100)
 
     return flat_tax_to_pay
