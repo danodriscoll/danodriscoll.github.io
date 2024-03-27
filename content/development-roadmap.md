@@ -17,7 +17,7 @@ A roadmap for agent-based model development.
 ### Central Bank
 
 - The monetary policy function is informed by Macro Data. See the [macro-data]({{< ref "/posts/macro-data-recording" >}} "Macro Data Recording") recording post.
-- Forward Guidance: The interest rate decision is made available to all agents in the next step.
+- Expectations Management: The interest rate decision is made available to all agents in the next step.
 
 ### Producer(s)
 
@@ -25,4 +25,4 @@ A roadmap for agent-based model development.
 
 ### Household(s)
 
-- Have bond price expectations that reflect Central Bank *forward guidance*.
+- Have bond price expectations that reflect Central Bank *expectations management*.
