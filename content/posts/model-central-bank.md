@@ -16,7 +16,7 @@ This is a simple Central Bank agent. The model consumes a time-series of histori
 
 {{< highlight python >}}
 class CentralBank(Agent):
-    """A Central Bank Agent"""
+    """The Central Bank Agent: More than a bank."""
     def __init__(self, rate_data, unique_id, model) -> None:
         self.breed = "Central Bank"
         self.period = 0 # Model run step.

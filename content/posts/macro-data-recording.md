@@ -24,6 +24,10 @@ r = redis.Redis(decode_responses=True)
 def zero_division(n, d):
     return n / d if d else 0
 
+"""
+Used by the Central Bank.
+"""
+
 # Called by Government.
 def pushBills(val):
     def pushVelocity():
