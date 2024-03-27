@@ -13,7 +13,7 @@ An agent-based (computational) [model](https://www.modernmoney.studio/models#abm
 
 ### Goal
 
-To better understand the institutional arrangements and outputs of a condensed modern money system.
+To better understand the institutional arrangements and outputs of a condensed modern money system. See a [goal extended]({{< ref "/posts/goal-extended" >}} "A Goal Extended").
 
 ### Supposition
 
