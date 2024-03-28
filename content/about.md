@@ -17,7 +17,7 @@ To better understand the institutional arrangements and outputs of a condensed m
 
 ### Supposition
 
-The UK Government money system, its long-term [Gilt](#gilt) dynamics, are bound by [parameter]({{< ref "/development-roadmap/#model-parameter-rules" >}} "A Development Roadmap") rules set within a particular [macro-financial](https://www.data-reports.net/studio-sketch/public-private-finance.html) regime.
+A macro-financial regime is a particular combination of monetary, fiscal, and financial institutions, the governance strategy of a state, that shapes the creation and allocation of money. The UK Government money system, its long-term [Gilt](#gilt) dynamics, are bound by the [parameter]({{< ref "/development-roadmap/#model-parameter-rules" >}} "A Development Roadmap") rules set within a particular [macro-financial](https://www.data-reports.net/studio-sketch/public-private-finance.html) regime.
 
 {{< info-alert title="Gilt" id="gilt" >}}
 A gilt is a UK Government liability denominated in sterling, issued by the UK Treasury and listed on the London Stock Exchange. The term *gilt* or *gilt-edged security* is a reference to the primary characteristic of gilts as an investment: their security.
