@@ -1,4 +1,3 @@
-# GEM Open Output
+# GEM Model Run Parameter Repo
 
-Visit [GiltEdged.info](https://www.giltedged.info).
-
+Visit [GiltEdged.systems](https://www.giltedged.systems).
