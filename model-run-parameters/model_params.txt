@@ -1,0 +1,469 @@
+Scenario model run parameters.
+
+options:
+  -h, --help            show this help message and exit
+  --scenario-name SCENARIO_NAME
+                        The name of the model run scenario parameter file.
+                        (default: Model parameter file name)
+  --test-run, --no-test-run
+                        The model run type: --test-run or --no-test-run
+                        (default: True)
+  --test-run-steps TEST_RUN_STEPS
+                        The number of test run model steps. Set at 170 for
+                        steady state system. (default: 170)
+  --model-future-steps MODEL_FUTURE_STEPS
+                        Instruct the model to step into the future, beyond ONS
+                        timeseries data. Set to 0 if ending otherwise.
+                        (default: 0)
+  --test-run-base-rate TEST_RUN_BASE_RATE
+                        The intitial central bank base rate for a model test
+                        run. (default: 0)
+  --local-plot, --no-local-plot
+                        Plot model output immediately? --local-plot or --no-
+                        local-plot (default: False)
+  --produce-csv-output, --no-produce-csv-output
+                        Produce model output csv files? --produce-csv-output;
+                        --no-produce-csv-output (default: False)
+  --opening-num-firms OPENING_NUM_FIRMS
+                        The initial number of firm agents. There will be fewer
+                        Firms than Households for some level of unemployment
+                        to exist. (default: 1)
+  --initial-sre-ratio INITIAL_SRE_RATIO
+                        The initial percentage of the total number of firms
+                        that must be created as state run enterprise (SRE).
+                        (default: 0.7)
+  --sre-population-floor SRE_POPULATION_FLOOR
+                        The minimum percentage of firms that the government
+                        wants to keep as state run enterprises (SREs) in the
+                        system. (default: 0.5)
+  --sre-profit-remittance-rate SRE_PROFIT_REMITTANCE_RATE
+                        The percentage of SRE net profit remitted to the
+                        government. (default: 0.5)
+  --firm-max-workforce-share FIRM_MAX_WORKFORCE_SHARE
+                        The workforce share limit parameter. The maximum
+                        percentage of total households a firm may employ.
+                        (default: 0.8)
+  --wage-share-of-revenue WAGE_SHARE_OF_REVENUE
+                        The fixed percentage of total revenue that a firm will
+                        pay out as wages to households. (default: 0.8)
+  --firm-profitability-threshold FIRM_PROFITABILITY_THRESHOLD
+                        A parameter that will inform whether the population of
+                        Firms is to be added to during a model run. Record the
+                        average net profit of all firms for the last given
+                        number of steps. (default: 6)
+  --enable-inflation-aware-firm, --no-enable-inflation-aware-firm
+                        Enable a firm to be inflation aware in its working
+                        capital financing decision: --enable-inflation-aware-
+                        firm; --no-enable-inflation-aware-firm (default:
+                        False)
+  --wage-inflation-pass-through WAGE_INFLATION_PASS_THROUGH
+                        The inflation rate is a direct 'pass-through' of the
+                        economy-wide wage growth. Used in `_calculate_cpi`.
+                        (default: 0.9)
+  --ipo-market-sentiment-threshold IPO_MARKET_SENTIMENT_THRESHOLD
+                        Is there investor appetite for new stock offerings? A
+                        firm will be much more likely to go public in a 'hot'
+                        market where investors have a lot of cash and are
+                        actively seeking new opportunities. (default: 0.5)
+  --ipo-profitability-threshold IPO_PROFITABILITY_THRESHOLD
+                        Is a firm fundamentally strong enough? The number of
+                        steps that the firm has to profitable; its track
+                        record of consistent profitability. (default: 6)
+  --ipo-scale-threshold IPO_SCALE_THRESHOLD
+                        Is the firm large enough relative to the overall
+                        economy to be a viable public entity? (default: 0.05)
+  --ipo-regular-dividend-yield IPO_REGULAR_DIVIDEND_YIELD
+                        The regular dividend yield made from retained earnings
+                        by a public firm. (default: 0.05)
+  --leveraged-dividend-yield-boost LEVERAGED_DIVIDEND_YIELD_BOOST
+                        The 'boost' to the dividend yield for an aggressive,
+                        leveraged firm. (default: 0.1)
+  --special-dividend-yield-on-ipo SPECIAL_DIVIDEND_YIELD_ON_IPO
+                        The special dividend yield made from IPO proceeds.
+                        (default: 0.05)
+  --ipo-special-dividend-activation-threshold IPO_SPECIAL_DIVIDEND_ACTIVATION_THRESHOLD
+                        The activation rate at which a special dividend from
+                        IPO proceeds will be made. Do not even consider a
+                        special dividend if the firm has already spent most
+                        (80 percent if activattion rate is 20 percent) of its
+                        IPO cash. (default: 0.2)
+  --leveraged-dividend-start-step LEVERAGED_DIVIDEND_START_STEP
+                        The step number at which the 'leveraged' dividend
+                        behavior (borrowing to pay dividends) is allowed to
+                        begin. (default: 100)
+  --ipo-cushion-rate IPO_CUSHION_RATE
+                        Calculate how much cash is actually available for a
+                        special dividend payout from IPO funds above the
+                        mandatory cushion. (available_for_payout =
+                        time_deposit_balance - cushion_amount) (default: 0.15)
+  --ipo-app-fee-wage-multiplier IPO_APP_FEE_WAGE_MULTIPLIER
+                        The dynamic IPO application fee. This is the amount
+                        with which to multiply the current model average wage
+                        in order to calculate the IPO application fee charged
+                        by the Private Bank. (default: 5)
+  --pe-underwriting-fee-rate PE_UNDERWRITING_FEE_RATE
+                        This is the underwriting fee rate (a percentage of the
+                        total IPO value) that is charged by the Private Bank
+                        to a private enterprise firm for undergoing the IPO.
+                        (default: 0.07)
+  --sre-underwriting-fee-rate SRE_UNDERWRITING_FEE_RATE
+                        This is the underwriting fee rate (a percentage of the
+                        total IPO value) that is charged by the Private Bank
+                        to a state run enterprise (SRE) firm for undergoing
+                        the IPO. (default: 0.03)
+  --opening-num-households OPENING_NUM_HOUSEHOLDS
+                        The initial number of Household agents. The number of
+                        Households must never be fewer (must be equal to, or
+                        greater than) the number of Firms. (default: 1)
+  --initial-wage-expectation INITIAL_WAGE_EXPECTATION
+                        The initial wage expectation represents a plausible
+                        starting wage before any have been paid to households.
+                        (default: 10)
+  --allow-wage-bargaining, --no-allow-wage-bargaining
+                        Allow wage bargaining for low income households.
+                        --allow-wage-bargaining; --no-allow-wage-bargaining
+                        (default: True)
+  --low-unemployment-threshold LOW_UNEMPLOYMENT_THRESHOLD
+                        A parameter that informs whether new agents are to be
+                        added to the population of Households. Triggered if
+                        the labor market is 'hot' (very low unemployment). Eg.
+                        5% (default: 0.05)
+  --unemployment-benefit-replacement-rate UNEMPLOYMENT_BENEFIT_REPLACEMENT_RATE
+                        The percentage of the rolling average wage paid to
+                        accumulator and precarious households that will be
+                        received as a transfer payment for periods of
+                        unemployment. (default: 0.05)
+  --minimum-profiling-benchmark MINIMUM_PROFILING_BENCHMARK
+                        A fixed minimum benchmark floor used in the asignment
+                        of a household to a wealth `profile`. (default: 10)
+  --system-time-series SYSTEM_TIME_SERIES
+                        Expenditure, interest rate, and taxation rate time-
+                        series data. See the Google Sheet 'Gilt Edged Input
+                        Time Series'. (default: SYSTEM_TIME_SERIES)
+  --time-series-range TIME_SERIES_RANGE
+                        System time-series range. See the Google Sheet 'Gilt
+                        Edged Input Time Series'. (default: A2:H10)
+  --pro-rata-expenditure, --no-pro-rata-expenditure
+                        Make expenditure 'values' a ratio of real-world UK
+                        population figures to number of model Households:
+                        --pro-rata-expenditure, --no-pro-rata-expenditure
+                        (default: True)
+  --debt-issuance-split-bonds DEBT_ISSUANCE_SPLIT_BONDS
+                        80 percent of government financing is long-term bonds
+                        (default: 0.8)
+  --debt-issuance-split-tbills DEBT_ISSUANCE_SPLIT_TBILLS
+                        20 percent of government financing is short-term
+                        T-bills (default: 0.2)
+  --tbill-maturity TBILL_MATURITY
+                        T-Bills mature in X model steps (default: 3)
+  --target-spending-to-gdp-ratio TARGET_SPENDING_TO_GDP_RATIO
+                        The government's long-term target for spending as a
+                        share of GDP. (default: 0.2)
+  --a-profile-bond-allocation-preference A_PROFILE_BOND_ALLOCATION_PREFERENCE
+                        The effective bond preference. How much a household
+                        with a profile of 'high_net_worth' will allocate to
+                        bonds out of its total govt. debt allocation.
+                        (default: 0.75)
+  --b-profile-bond-allocation-preference B_PROFILE_BOND_ALLOCATION_PREFERENCE
+                        The effective bond preference. How much a household
+                        with a profile of 'established' will allocate to bonds
+                        out of its total govt. debt allocation. (default: 0.6)
+  --c-profile-bond-allocation-preference C_PROFILE_BOND_ALLOCATION_PREFERENCE
+                        The effective bond preference. How much a household
+                        with a profile of 'accumulator' will allocate to bonds
+                        out of its total govt. debt allocation. (default: 0.4)
+  --d-profile-bond-allocation-preference D_PROFILE_BOND_ALLOCATION_PREFERENCE
+                        The effective bond preference. How much a household
+                        with a profile of 'precarious' will allocate to bonds
+                        out of its total govt. debt allocation. (default: 0)
+  --a-profile-cash-preference-ratio A_PROFILE_CASH_PREFERENCE_RATIO
+                        The cash preference. How much will a household with a
+                        profile of 'high_net_worth' allocate to cash.
+                        (default: 0.01)
+  --b-profile-cash-preference-ratio B_PROFILE_CASH_PREFERENCE_RATIO
+                        The cash preference. How much will a household with a
+                        profile of 'established' allocate to cash. (default:
+                        0.02)
+  --c-profile-cash-preference-ratio C_PROFILE_CASH_PREFERENCE_RATIO
+                        The cash preference. How much will a household with a
+                        profile of 'accumulator' allocate to cash. (default:
+                        0.1)
+  --d-profile-cash-preference-ratio D_PROFILE_CASH_PREFERENCE_RATIO
+                        The cash preference. How much will a household with a
+                        profile of 'precarious' allocate to cash. (default:
+                        0.5)
+  --a-profile-equity-allocation-preference A_PROFILE_EQUITY_ALLOCATION_PREFERENCE
+                        The equity preference. How much will a household with
+                        a profile of 'high_net_worth' allocate to Firm
+                        equities. (default: 0.5)
+  --b-profile-equity-allocation-preference B_PROFILE_EQUITY_ALLOCATION_PREFERENCE
+                        The equity preference. How much will a household with
+                        a profile of 'established' allocate to Firm equities
+                        (default: 0.4)
+  --c-profile-equity-allocation-preference C_PROFILE_EQUITY_ALLOCATION_PREFERENCE
+                        The equity preference. How much will a household with
+                        a profile of 'accumulator' allocate to Firm equities.
+                        (default: 0.3)
+  --d-profile-equity-allocation-preference D_PROFILE_EQUITY_ALLOCATION_PREFERENCE
+                        The equity preference. How much will a household with
+                        a profile of 'precarious' allocate to Firm equities.
+                        (default: 0.01)
+  --a-profile-savings-allocation-rate A_PROFILE_SAVINGS_ALLOCATION_RATE
+                        The savings allocation rate for a Household with a
+                        profile of 'high_net_worth'. (default: 0.1)
+  --b-profile-savings-allocation-rate B_PROFILE_SAVINGS_ALLOCATION_RATE
+                        The savings allocation rate for a Household with a
+                        profile of 'established'. (default: 0.2)
+  --c-profile-savings-allocation-rate C_PROFILE_SAVINGS_ALLOCATION_RATE
+                        The savings allocation rate for a Household with a
+                        profile of 'accumulator'. (default: 0.15)
+  --d-profile-savings-allocation-rate D_PROFILE_SAVINGS_ALLOCATION_RATE
+                        The savings allocation rate for a Household with a
+                        profile of 'precarious'. (default: 0)
+  --rebalancing-tolerance-band REBALANCING_TOLERANCE_BAND
+                        The percentage deviation from the target asset
+                        allocation that will trigger a rebalancing trade by a
+                        household with a profile of 'high_net_worth' or
+                        'established'. (default: 0.1)
+  --sentiment-derisking-rate SENTIMENT_DERISKING_RATE
+                        The percentage of risky assets a household with a
+                        profile of 'high_net_worth' or 'established' will sell
+                        when de-risking due to negative market sentiment.
+                        (default: 0.1)
+  --cb-history-length CB_HISTORY_LENGTH
+                        The number of past interest (base) rates the Central
+                        Bank remembers for averaging. (default: 12)
+  --t-bill-rate-discount T_BILL_RATE_DISCOUNT
+                        The T-bill interest rate is set to some percentage of
+                        the recent average Central Bank rate. (default: 0.8)
+  --a-profile-mpc A_PROFILE_MPC
+                        The marginal propensity to consume (a percentage) of a
+                        Household with a profile of 'high_net_worth'.
+                        (default: 0.4)
+  --b-profile-mpc B_PROFILE_MPC
+                        The marginal propensity to consume (a percentage) of a
+                        Household with a profile of 'established'. (default:
+                        0.6)
+  --c-profile-mpc C_PROFILE_MPC
+                        The marginal propensity to consume (a percentage) of a
+                        Household with a profile of 'accumulator'. (default:
+                        0.8)
+  --d-profile-mpc D_PROFILE_MPC
+                        The marginal propensity to consume (a percentage) of a
+                        Household with a profile of 'precarious'. (default:
+                        0.95)
+  --a-profile-pcw A_PROFILE_PCW
+                        The propensity to consume from wealth (a percentage)
+                        of a Household with a profile of 'high_net_worth'.
+                        (default: 0.6)
+  --b-profile-pcw B_PROFILE_PCW
+                        The propensity to consume from wealth (a percentage)
+                        of a Household with a profile of 'established'.
+                        (default: 0.4)
+  --c-profile-pcw C_PROFILE_PCW
+                        The propensity to consume from wealth (a percentage)
+                        of a Household with a profile of 'established'.
+                        (default: 0.2)
+  --d-profile-pcw D_PROFILE_PCW
+                        The propensity to consume from wealth (a percentage)
+                        of a Household with a profile of 'precarious'.
+                        (default: 0.05)
+  --a-profile-consumption-monopoly-firm A_PROFILE_CONSUMPTION_MONOPOLY_FIRM
+                        The percentage of 'actual consumption desires' a
+                        household with a profile of 'high_net_worth' will
+                        allocate to natural monopoly firms. (default: 0.2)
+  --b-profile-consumption-monopoly-firm B_PROFILE_CONSUMPTION_MONOPOLY_FIRM
+                        The percentage of 'actual consumption desires' a
+                        household with a profile of 'established' will
+                        allocate to natural monopoly firms. (default: 0.35)
+  --c-profile-consumption-monopoly-firm C_PROFILE_CONSUMPTION_MONOPOLY_FIRM
+                        The percentage of 'actual consumption desires' a
+                        household with a profile of 'accumulator' will
+                        allocate to natural monopoly firms. (default: 0.45)
+  --d-profile-consumption-monopoly-firm D_PROFILE_CONSUMPTION_MONOPOLY_FIRM
+                        The percentage of 'actual consumption desires' a
+                        household with a profile of 'precarious' will allocate
+                        to natural monopoly firms. (default: 0.6)
+  --use-tax-lag, --no-use-tax-lag
+                        Household income taxation represents a liability that
+                        will be paid either in the current of following step:
+                        --use-tax-lag or --no-use-tax-lag (default: False)
+  --use-corporate-tax-lag, --no-use-corporate-tax-lag
+                        Corporate taxation represents a liability that will be
+                        paid either in the current of following step: --use-
+                        corporate-tax-lag or --no-use-corporate-tax-lag
+                        (default: False)
+  --a-profile-wage-minimum A_PROFILE_WAGE_MINIMUM
+                        The minimum percentage of the full wage a Firm will
+                        pay to a Household with a profile of 'high_net_worth'.
+                        (default: 0.9)
+  --a-profile-wage-maximum A_PROFILE_WAGE_MAXIMUM
+                        The maximum percentage of the full wage a Firm will
+                        pay to a Household with a profile of 'high_net_worth'.
+                        (default: 1)
+  --b-profile-wage-minimum B_PROFILE_WAGE_MINIMUM
+                        The minimum percentage of the full wage a Firm will
+                        pay to a Household with a profile of 'established'.
+                        (default: 0.8)
+  --b-profile-wage-maximum B_PROFILE_WAGE_MAXIMUM
+                        The maximum percentage of the full wage a Firm will
+                        pay to a Household with a profile of 'established'.
+                        (default: 0.95)
+  --c-profile-wage-minimum C_PROFILE_WAGE_MINIMUM
+                        The minimum percentage of the full wage a Firm will
+                        pay to a Household with a profile of 'accumulator'.
+                        (default: 0.7)
+  --c-profile-wage-maximum C_PROFILE_WAGE_MAXIMUM
+                        The maximum percentage of the full wage a Firm will
+                        pay to a Household with a profile of 'accumulator'.
+                        (default: 0.9)
+  --d-profile-wage-minimum D_PROFILE_WAGE_MINIMUM
+                        The minimum percentage of the full wage a Firm will
+                        pay to a Household with a profile of 'precarious'.
+                        (default: 0.7)
+  --d-profile-wage-maximum D_PROFILE_WAGE_MAXIMUM
+                        The maximum percentage of the full wage a Firm will
+                        pay to a Household with a profile of 'precarious'.
+                        (default: 0.8)
+  --a-profile-cg-rate A_PROFILE_CG_RATE
+                        The capital gains tax rate for a Household with a
+                        profile of 'high_net_worth'. (default: 0.32)
+  --b-profile-cg-rate B_PROFILE_CG_RATE
+                        The capital gains tax rate for a Household with a
+                        profile of 'established'. (default: 0.24)
+  --c-profile-cg-rate C_PROFILE_CG_RATE
+                        The capital gains tax rate for a Household with a
+                        profile of 'accumulator'. (default: 0.18)
+  --d-profile-cg-rate D_PROFILE_CG_RATE
+                        The capital gains tax rate for a Household with a
+                        profile of 'precarious'. (default: 0.14)
+  --allow-income-tax-payment-strategies, --no-allow-income-tax-payment-strategies
+                        Allow Households to undertake tax disburesement
+                        strategies. --allow-income-tax-payment-strategies;
+                        --no-allow-income-tax-payment-strategies (default:
+                        True)
+  --a-profile-tax-evasion-prob A_PROFILE_TAX_EVASION_PROB
+                        The base probability (a percentage) that a Household
+                        with a profile of 'high_net_worth' will attempt
+                        illegal tax evasion. (default: 0.3)
+  --b-profile-tax-evasion-prob B_PROFILE_TAX_EVASION_PROB
+                        The base probability (a percentage) that a Household
+                        with a profile of 'established' will attempt illegal
+                        tax evasion. (default: 0.1)
+  --voluntary-overpayment-prob VOLUNTARY_OVERPAYMENT_PROB
+                        The probability (a percentage) that a Household will
+                        make a voluntary overpayment of between 0.5 percent
+                        and 5 percent of its final tax payment (default: 0.03)
+  --bank-loan-term BANK_LOAN_TERM
+                        Loans mature in X model steps (default: 10)
+  --bank-lending-markup-hnw BANK_LENDING_MARKUP_HNW
+                        Bank lends at 2% markup over the base rate for
+                        households with a profile of 'high_net_worth'.
+                        (default: 0.02)
+  --bank-lending-markup-est BANK_LENDING_MARKUP_EST
+                        Bank lends at 3% markup over the base rate for
+                        households with a profile of 'established'. (default:
+                        0.03)
+  --bank-lending-markup-con BANK_LENDING_MARKUP_CON
+                        Bank lends at 5% markup over the base rate for
+                        households borrowing for consumption. (default: 0.05)
+  --bank-lending-base-markup-cap BANK_LENDING_BASE_MARKUP_CAP
+                        Base markup for bank working capital lending to firms.
+                        (default: 0.01)
+  --bank-lending-inc-markup-cap BANK_LENDING_INC_MARKUP_CAP
+                        The firm priority tier increment over the base markup
+                        for working capital lending. (default: 0.01)
+  --pe-dividend-borrowing-markup PE_DIVIDEND_BORROWING_MARKUP
+                        The extra interest rate markup the bank charges for
+                        these non-productive, higher-risk 'dividend loans'.
+                        (default: 0.02)
+  --pe-dividend-borrowing-limit-factor PE_DIVIDEND_BORROWING_LIMIT_FACTOR
+                        The maximum amount a firm can borrow for dividends,
+                        expressed as a fraction of its total market
+                        capitalisation. (default: 0.8)
+  --minimum-reserve-ratio MINIMUM_RESERVE_RATIO
+                        This is the percentage of total assets the private
+                        bank must hold as reserves. (default: 0.1)
+  --private-bank-tax-rate PRIVATE_BANK_TAX_RATE
+                        A separate tax rate for the private bank. This allows
+                        for modeling special bank levies or different tax
+                        regimes. (default: 0.2)
+  --primary-dealer-spread PRIMARY_DEALER_SPREAD
+                        The spread that the private bank earns for selling
+                        government debt to the fund manager (default: 0.0002)
+  --equity-dealer-spread EQUITY_DEALER_SPREAD
+                        The bid/ask spread that the private bank earns for
+                        buying and selling firm equities to the fund manager
+                        as a market maker. (default: 0.01)
+  --financial-sector-payout-ratio FINANCIAL_SECTOR_PAYOUT_RATIO
+                        The payout ratio for financial sector dividends to the
+                        ultimate owners, the household sector. (default: 0.2)
+  --subsistence-consumption-fraction SUBSISTENCE_CONSUMPTION_FRACTION
+                        Subsistence level as a fraction of average household
+                        equity (default: 0.1)
+  --bank-max-debt-to-equity-ratio BANK_MAX_DEBT_TO_EQUITY_RATIO
+                        Max debt to equity ratio for households (default: 0.5)
+  --enable-lending, --no-enable-lending
+                        Enable private bank lending: --enable-lending; --no-
+                        enable-lending (default: False)
+  --loan-default-threshold LOAN_DEFAULT_THRESHOLD
+                        Number of missed payments by a household to trigger
+                        default (default: 3)
+  --firm-default-threshold FIRM_DEFAULT_THRESHOLD
+                        Number of missed payments by a firm to trigger default
+                        (default: 3)
+  --default-probation-period DEFAULT_PROBATION_PERIOD
+                        Steps a household must wait after default to borrow
+                        again (default: 6)
+  --time-deposit-interest-factor TIME_DEPOSIT_INTEREST_FACTOR
+                        The factor by which the private bank pays interest on
+                        time deposit accounts held by households and firms.
+                        For instance, 50 percent of the CB base rate.
+                        (default: 0.5)
+  --custody-interest-rate-factor CUSTODY_INTEREST_RATE_FACTOR
+                        The factor by which the private bank pays interest on
+                        time deposit accounts held as custodian accounts on
+                        behalf of the fund manager. For instance, 10 percent
+                        of the CB base rate. (default: 0.05)
+  --custody-fee-rate CUSTODY_FEE_RATE
+                        The fee charged by the private bank to the for
+                        managing the fund manager's custodian accounts.
+                        (default: 0.05)
+  --bank-underwriting-exposure-limit BANK_UNDERWRITING_EXPOSURE_LIMIT
+                        The Underwriting Exposure Limit: The private bank's
+                        limit on the total value of underwritten IPO shares it
+                        can hold on its balance sheet as a percentage of its
+                        own equity. For example, the rule could be: Total
+                        Value of Unsold IPO Shares <= 20 percent of Bank
+                        Equity (default: 0.2)
+  --use-cb-policy-lag, --no-use-cb-policy-lag
+                        Use the CB policy lag: --use-cb-policy-lag; --no-use-
+                        cb-policy-lag (default: False)
+  --cb-policy-lag-length CB_POLICY_LAG_LENGTH
+                        The number of model steps the CB policy lag applies
+                        for. The central bank base rate is set from the oldest
+                        decision in this history, creating a lag. (default: 2)
+  --inflation-target INFLATION_TARGET
+                        The central bank's target inflation rate. (default:
+                        0.02)
+  --inflation-target-band INFLATION_TARGET_BAND
+                        The central bank's target inflation rate band.
+                        (default: 0.01)
+  --market-stress-threshold MARKET_STRESS_THRESHOLD
+                        The central bank `market stress` indicator. Used to
+                        indicate a sudden, sharp spike in yields. `0.005` ==
+                        50 basis points. (default: 0.005)
+  --floor-system-start-step FLOOR_SYSTEM_START_STEP
+                        This defines the exact step at which the new monetary
+                        policy framework begins: That is, the paying of
+                        interest on reserves is activated. Set to 1000000 if
+                        not required. (default: 100)
+  --fund-manager-sell-off-rate FUND_MANAGER_SELL_OFF_RATE
+                        If the fund manager's strategy demands it sell bonds,
+                        it shouldn't dump its entire portfolio. It should de-
+                        risk by a manageable amount; the sell off rate will
+                        instruct the fund to sell a certain percentage of the
+                        total value of its bond fund. (default: 0.1)
+  --fund-manager-fee-rate FUND_MANAGER_FEE_RATE
+                        The fund manager's client fee (a percentage) (default:
+                        0.05)
