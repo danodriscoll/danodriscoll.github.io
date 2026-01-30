@@ -66,6 +66,15 @@
       }
     </style>
   </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PF9708FTB4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PF9708FTB4');
+  </script>
   <body>
     <nav class="navbar navbar-dark bg-dark border-bottom border-body navbar-expand-lg" data-bs-theme="dark">
       <div class="container-fluid">
@@ -102,8 +111,8 @@
       <ul class="list-group text-start">
         <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-2">
           <div>
-            <div class="fw-semibold">GEM Substack</div>
-            <small class="text-body-secondary">Long-form notes and updates.</small>
+            <div class="fw-semibold">Substack</div>
+            <small class="text-body-secondary">Long-form notes and and posts describe the evolution of model development and public data outputs.</small>
           </div>
           <a
             class="icon-link"
@@ -141,15 +150,21 @@
           <thead class="table-light">
             <tr>
               <th scope="col">Output Type</th>
-              <th scope="col">Brief Description</th>
+              <th scope="col">Short Description</th>
               <th scope="col">Link &amp; Status</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">Static Output Dashboard</th>
+              <th scope="row">Static Dashboard</th>
               <td>
-                A simple steady state scenario model test run.
+                The output from a simple steady state scenario model test run.
+                <a
+                  class="badge rounded-pill text-bg-primary text-decoration-none"
+                  href="https://danodriscoll.substack.com/t/steady-state"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >steady-state</a>
               </td>
               <td>
                 <a
@@ -163,9 +178,9 @@
               </td>
             </tr>
             <tr>
-              <th scope="row">Dynamic Data Application</th>
+              <th scope="row">Data Application</th>
               <td>
-                Loading of real-world data into a scenario model run.
+                Dynamic output from a scenario model run loaded with real-world economic time-series data.
               </td>
               <td><span class="badge text-bg-secondary">In development</span></td>
             </tr>              
