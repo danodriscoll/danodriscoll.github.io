@@ -15,12 +15,21 @@ options:
                         Instruct the model to step into the future, beyond ONS
                         timeseries data. Set to 0 if ending otherwise.
                         (default: 0)
+  --spawn-new-agents, --no-spawn-new-agents
+                        Spawn new firm and household agents in model run. The
+                        model run type: --no-spawn-new-agents or --spawn-new-
+                        agents (default: False)
   --test-run-base-rate TEST_RUN_BASE_RATE
                         The intitial central bank base rate for a model test
                         run. (default: 0)
-  --local-plot, --no-local-plot
-                        Plot model output immediately? --local-plot or --no-
-                        local-plot (default: False)
+  --local-dashboard, --no-local-dashboard
+                        Create a local dashboard from the model output.
+                        --local-dashboard or --no-local-dashboard (default:
+                        False)
+  --show-endogenous-outputs, --no-show-endogenous-outputs
+                        Include endogenous dashboard outputs. --show-
+                        endogenous-outputs or --no-show-endogenous-outputs
+                        (default: True)
   --produce-csv-output, --no-produce-csv-output
                         Produce model output csv files? --produce-csv-output;
                         --no-produce-csv-output (default: False)
@@ -89,8 +98,11 @@ options:
                         IPO cash. (default: 0.2)
   --leveraged-dividend-start-step LEVERAGED_DIVIDEND_START_STEP
                         The step number at which the 'leveraged' dividend
-                        behavior (borrowing to pay dividends) is allowed to
-                        begin. (default: 100)
+                        behaviour (borrowing to pay dividends) is allowed to
+                        begin. Set to 1000000 if not required. Set to 336 if
+                        running a model from 01-01-1955 and you want
+                        'leveraged' dividend behaviour to begin on 01-01-1983.
+                        (default: 1000000)
   --ipo-cushion-rate IPO_CUSHION_RATE
                         Calculate how much cash is actually available for a
                         special dividend payout from IPO funds above the
@@ -112,9 +124,7 @@ options:
                         to a state run enterprise (SRE) firm for undergoing
                         the IPO. (default: 0.03)
   --opening-num-households OPENING_NUM_HOUSEHOLDS
-                        The initial number of Household agents. The number of
-                        Households must never be fewer (must be equal to, or
-                        greater than) the number of Firms. (default: 1)
+                        The initial number of Household agents. (default: 1)
   --initial-wage-expectation INITIAL_WAGE_EXPECTATION
                         The initial wage expectation represents a plausible
                         starting wage before any have been paid to households.
@@ -130,24 +140,11 @@ options:
                         5% (default: 0.05)
   --unemployment-benefit-replacement-rate UNEMPLOYMENT_BENEFIT_REPLACEMENT_RATE
                         The percentage of the rolling average wage paid to
-                        accumulator and precarious households that will be
-                        received as a transfer payment for periods of
-                        unemployment. (default: 0.05)
+                        households that will be received as a transfer payment
+                        for periods of unemployment. (default: 0.05)
   --minimum-profiling-benchmark MINIMUM_PROFILING_BENCHMARK
                         A fixed minimum benchmark floor used in the asignment
                         of a household to a wealth `profile`. (default: 10)
-  --system-time-series SYSTEM_TIME_SERIES
-                        Expenditure, interest rate, and taxation rate time-
-                        series data. See the Google Sheet 'Gilt Edged Input
-                        Time Series'. (default: SYSTEM_TIME_SERIES)
-  --time-series-range TIME_SERIES_RANGE
-                        System time-series range. See the Google Sheet 'Gilt
-                        Edged Input Time Series'. (default: A2:H10)
-  --pro-rata-expenditure, --no-pro-rata-expenditure
-                        Make expenditure 'values' a ratio of real-world UK
-                        population figures to number of model Households:
-                        --pro-rata-expenditure, --no-pro-rata-expenditure
-                        (default: True)
   --debt-issuance-split-bonds DEBT_ISSUANCE_SPLIT_BONDS
                         80 percent of government financing is long-term bonds
                         (default: 0.8)
@@ -457,7 +454,9 @@ options:
                         This defines the exact step at which the new monetary
                         policy framework begins: That is, the paying of
                         interest on reserves is activated. Set to 1000000 if
-                        not required. (default: 100)
+                        not required. Set to 649 if running a model from
+                        01-01-1955 and you want the policy to begin on
+                        01-01-2009. (default: 1000000)
   --fund-manager-sell-off-rate FUND_MANAGER_SELL_OFF_RATE
                         If the fund manager's strategy demands it sell bonds,
                         it shouldn't dump its entire portfolio. It should de-
